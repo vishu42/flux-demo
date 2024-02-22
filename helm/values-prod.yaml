@@ -1,0 +1,4 @@
+image:
+  args: ["-listen=:8080"]
+  tag: 0.0.2
+

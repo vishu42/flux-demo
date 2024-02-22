@@ -1,0 +1,10 @@
+Phase 1
+- create a test repo
+- add ci pipeline to generate tags
+- add pipeline to build and push the docker image
+- create helmreleases (one per target enviornment)
+Phase 2
+- add image policies
+- add image automations
+
+
