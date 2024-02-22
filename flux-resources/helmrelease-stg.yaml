@@ -13,8 +13,8 @@ spec:
         name: test-app
         namespace: test
       valuesFiles:
-        - ./helm/values.yaml
-        - ./helm/values-stg.yaml
+        - ./helm/test-app/values.yaml
+        - ./helm/test-app/values-prod.yaml
       interval: 1m
   values:
     replicaCount: 2

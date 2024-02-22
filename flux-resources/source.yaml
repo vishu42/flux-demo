@@ -6,6 +6,6 @@ metadata:
   namespace: test
 spec:
   interval: 1m0s
-  url: https://github.com/vishu42/test-helm-chart
+  url: https://github.com/vishu42/flux-demo
   ref:
     branch: develop

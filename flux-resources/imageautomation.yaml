@@ -1,0 +1,22 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImageUpdateAutomation
+metadata:
+  name: test-app
+  namespace: flux-system
+spec:
+  interval: 1m
+  sourceRef:
+    kind: GitRepository
+    name: test-app
+    namespace: test
+  git:
+    checkout:
+      ref:
+        branch: develop
+    commit:
+      author:
+        email: fluxcdbot@users.noreply.github.com
+        name: fluxcdbot
+      messageTemplate: '[skip ci]{{range .Updated.Images}}{{println .}}{{end}}'
+    push:
+      branch: develop
