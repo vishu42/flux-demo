@@ -42,4 +42,35 @@ DEPLOY TO PROD
 --------------
 we would replace the prefix v with no prefix and push the docker image with updated version to dockerhub
 
+===========
+FLUX RESOURCES ASSOCIATED
+===========
+
+source (with or without authentication) -> helmrelease *n -> image repository -> image policy *n -> image automation
+
+===========
+FLOW
+===========
+
+commit and push -> ci builds a docker image and pushes it to a container registry -> image repository resource fetches new list of images -> image policy gets the latest image according to policy -> image automation bumps the version in values.yaml -> flux applies the latest config in the cluster
+
+===========
+REQUIREMENT
+===========
+
+- continous code integration
+- continous code deployment (manual and automated)
+
+===========
+STEPS
+===========
+- install flux
+- add ci
+- install flux-resources
+- get it all working
+
+
+
+
+
 
